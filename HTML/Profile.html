@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-..."/>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/resbonsive.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Banking Admin Dashboard</title>
+    <style>
+        .option4 { 
+        border-left: 5px solid #E1A730; 
+        background-color: #E1A730; 
+        color: white; 
+        cursor: pointer; 
+    } 
+
+        /* Profile Section Styles */
+        .profile-section {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+    }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+    }
+
+       
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+    }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+        /* Profile Info Styles */
+        .profile-info {
+            text-align: left;
+    }
+
+        .profile-info h2 {
+            margin: 0;
+            color: #07333e;
+    }
+
+        .profile-info p {
+            margin: 0;
+            color: #333;
+    }
+
+        /* Profile Details Styles */
+        .profile-details {
+            text-align: left;
+    }
+
+        #profileForm {
+            margin-top: 20px;
+    }
+
+        #profileForm label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #07333e;
+    }
+
+        #profileForm input,
+        #profileForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+        #profileForm input:focus,
+        #profileForm textarea:focus {
+            border-color: #E1A730;
+            background-color: rgb(223, 223, 223);
+            outline: none;
+    }
+
+        #profileForm button {
+            background-color: #E1A730;
+            color: #07333e;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+    }
+
+        #profileForm button:hover {
+            background-color: #2980b9;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- for header part -->
+    <header> 
+  
+        <div class="logosec"> 
+            <img class="img-logo" src="images/LOGO3-removebg-preview.png" alt="logo">
+            <!-- <div class="logo">Linixfy</div>  -->
+            <i class="fa fa-bars icn menuicn"  id="menuicn" style="font: 36px;"></i>
+        </div>
+  
+        <div class="message"> 
+            <div class="circle" onclick="navigateTo('profile.html')"></div> 
+            <i class='fas fa-bell' style='font-size:36px'></i>
+            <div class="dp" onclick="navigateTo('profile.html')">          
+                <i class='fas fa-user-circle' style='font-size:36px;'></i>
+            </div> 
+        </div> 
+    </header> 
+  
+    <div class="main-container"> 
+        <div class="navcontainer"> 
+            <nav class="nav"> 
+                <div class="nav-upper-options"> 
+                    <div class="nav-option option1" onclick="navigateTo('Dashboard.html')"> 
+                        <i class='fas fa-clone' style='font-size:24px'></i>
+                        <h3>Dashboard</h3> 
+                    </div> 
+
+                    <div class="nav-option option2" onclick="navigateTo('AddUser.html')"> 
+                        <i class='fas fa-address-card' style='font-size:24px'></i>
+                        <h3>Add User</h3>
+                    </div> 
+  
+                    <div class="nav-option option3" onclick="navigateTo('AddGroup.html')">
+                        <i class='fas fa-users' style='font-size:24px'></i>
+                        <h3>Add Group</h3>
+                    </div> 
+  
+                    <div class="nav-option option4" onclick="navigateTo('Profile.html')"> 
+                        <i class='far fa-address-book' style='font-size:24px'></i>
+                        <h3> Profile</h3> 
+                    </div> 
+  
+                    <div class="nav-option option5" onclick="navigateTo('Setting.html')"> 
+                        <i class='fas fa-cog' style='font-size:24px'></i>
+                        <h3> Settings</h3> 
+                    </div> 
+  
+                    <div class="nav-option option6" onclick="navigateTo('Logout.html')"> 
+                        <i class='fas fa-power-off' style='font-size:24px'></i>
+                        <h3>Logout</h3> 
+                    </div> 
+  
+                </div> 
+            </nav> 
+        </div> 
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-header">
+                <div class="profile-picture">
+                    <img src="/images/LOGO3-removebg-preview.png" alt="Admin Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h2>Ayan Abas</h2>
+                    <p>Administrator</p>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <form id="profileForm">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" value="Ayan Abas" readonly>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="ayanabas380@gmail.com" readonly>
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" rows="4" readonly>Administrator with a passion for excellence.</textarea>
+
+                    <button type="button" onclick="editProfile()">Edit Profile</button>
+                    <button type="button" onclick="saveProfile()" style="display: none;">Save Profile</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <script src="/script/main.js">
+        
+    </script>
+
+</body>
+</html>

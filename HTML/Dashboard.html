@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-..."/>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/resbonsive.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Banking Admin Dashboard</title>
+    <style>
+        .option1 { 
+            border-left: 5px solid #E1A730; 
+            background-color: #E1A730; 
+            color: white; 
+            cursor: pointer; 
+        } 
+    </style>
+</head>
+<body>
+
+    <!-- for header part -->
+    <header> 
+  
+        <div class="logosec"> 
+            <img class="img-logo" src="images/LOGO3-removebg-preview.png" alt="logo">
+            <!-- <div class="logo">Linixfy</div>  -->
+            <i class="fa fa-bars icn menuicn"  id="menuicn" style="font: 36px;"></i>
+        </div>
+  
+        <div class="message"> 
+            <div class="circle" onclick="navigateTo('Profile.html')"></div> 
+            <i class='fas fa-bell' style='font-size:36px; color: #07333e;'></i>
+            <div class="dp" onclick="navigateTo('Profile.html')">          
+                <i class='fas fa-user-circle' style='font-size:36px; color: #07333e;'></i>
+            </div> 
+        </div> 
+    </header> 
+  
+    <div class="main-container"> 
+        <div class="navcontainer"> 
+            <nav class="nav"> 
+                <div class="nav-upper-options"> 
+                    <div class="nav-option option1" onclick="navigateTo('Dashboard.html')"> 
+                        <i class='fas fa-clone' style='font-size:24px'></i>
+                        <h3>Dashboard</h3> 
+                    </div> 
+
+                    <div class="nav-option option2" onclick="navigateTo('AddUser.html')"> 
+                        <i class='fas fa-address-card' style='font-size:24px'></i>
+                        <h3>Add User</h3>
+                    </div> 
+  
+                    <div class="nav-option option3" onclick="navigateTo('AddGroup.html')">
+                        <i class='fas fa-users' style='font-size:24px'></i>
+                        <h3>Add Group</h3>
+                    </div> 
+  
+                    <div class="nav-option option4" onclick="navigateTo('Profile.html')"> 
+                        <i class='far fa-address-book' style='font-size:24px'></i>
+                        <h3> Profile</h3> 
+                    </div> 
+  
+                    <div class="nav-option option5" onclick="navigateTo('Setting.html')"> 
+                        <i class='fas fa-cog' style='font-size:24px'></i>
+                        <h3> Settings</h3> 
+                    </div> 
+  
+                    <div class="nav-option option6" onclick="navigateTo('Logout.html')"> 
+                        <i class='fas fa-power-off' style='font-size:24px'></i>
+                        <h3>Logout</h3> 
+                    </div> 
+  
+                </div> 
+            </nav> 
+        </div> 
+        <div class="main"> 
+  
+            <div class="box-container"> 
+
+
+  
+                <div class="box box1"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">60.5k</h2> 
+                        <h2 class="topic">Total Users</h2> 
+                    </div> 
+  
+                    <i class="fas fa-chart-bar" style="font-size: 48px; color: #E1A730;"></i> 
+                </div> 
+  
+                <div class="box box2"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">150</h2> 
+                        <h2 class="topic">Active USers</h2> 
+                    </div> 
+                    <i class="fa fa-eye" style="font-size:48px; color: #E1A730;"></i>
+  
+                   
+                </div> 
+  
+                <div class="box box3"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">320</h2> 
+                        <h2 class="topic">User List</h2> 
+                    </div> 
+  
+                    <i class='fas fa-poll' style='font-size:48px; color: #E1A730;'></i>
+                </div> 
+  
+                
+  
+            <div class="report-container"> 
+                <div class="report-header"> 
+                    <h1 class="recent-Articles">Recent Users</h1> 
+                    <button class="view">View All</button> 
+                </div> 
+  
+                <div class="report-body"> 
+                    <div class="report-topic-heading"> 
+                        <h3 class="t-op">Username</h3> 
+                        <h3 class="t-op">Password</h3> 
+                        <h3 class="t-op">FullName</h3> 
+                        <h3 class="t-op">Actions</h3> 
+                    </div> 
+  
+                    <div class="items"> 
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">ayanabas1</h3> 
+                            <h3 class="t-op-nextlvl">Ayan Abas</h3>
+                            <h3 class="t-op-nextlvl">1234</h3> 
+                            <h3 class="t-op-nextlvl label-tag">Admin</h3> 
+                        </div> 
+  
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">bethlhem3</h3> 
+                            <h3 class="t-op-nextlvl">Bethlehem</h3> 
+                            <h3 class="t-op-nextlvl">1234</h3> 
+                            <h3 class="t-op-nextlvl label-tag">User</h3> 
+                        </div> 
+
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">bethlhem3</h3> 
+                            <h3 class="t-op-nextlvl">Bethlehem</h3> 
+                            <h3 class="t-op-nextlvl">1234</h3> 
+                            <h3 class="t-op-nextlvl label-tag">User</h3> 
+                        </div> 
+
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">bethlhem3</h3> 
+                            <h3 class="t-op-nextlvl">Bethlehem</h3> 
+                            <h3 class="t-op-nextlvl">1234</h3> 
+                            <h3 class="t-op-nextlvl label-tag">User</h3> 
+                        </div> 
+
+                        <div class="item1"> 
+                            <h3 class="t-op-nextlvl">bethlhem3</h3> 
+                            <h3 class="t-op-nextlvl">Bethlehem</h3> 
+                            <h3 class="t-op-nextlvl">1234</h3> 
+                            <h3 class="t-op-nextlvl label-tag">User</h3> 
+                        </div> 
+                       
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+  
+    </div> 
+    
+
+    <script src="/script/main.js">
+        
+    </script>
+</body>
+</html>
